@@ -6,7 +6,6 @@ const app = express();
 const multer = require("multer");
 const path = require("path");
 
-//setproject********************************************************************************************
 app.set("views", path.join(__dirname, "/public/views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));
@@ -18,6 +17,7 @@ app.use(
 
 // const url = "https://node56384-noderest-test1.proen.app.ruk-com.cloud"
 const url = "http://10.104.13.219:3000";
+
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -268,6 +268,10 @@ app.get("/delete/:id", async (req, res) => {
     res.status(500).send("Error");
   }
 });
+
+
+
+
 
 app.listen(5500, () => {
   console.log(`Server is running on http://localhost:5500`);
