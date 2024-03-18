@@ -15,10 +15,10 @@ app.use(
   session({ secret: "mysession", resave: false, saveUninitialized: true })
 );
 
-// const url = "https://node56384-noderest-test1.proen.app.ruk-com.cloud"
-const url = "http://10.104.18.186:3000";
-//const url = "http://10.104.13.219:3000";
-
+//const url = "https://node56384-noderest-test1.proen.app.ruk-com.cloud"
+//const url = "http://10.104.18.186:3000";
+const url = "http://10.104.13.219:3000";
+//const url = "http://localhost:3000";
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
